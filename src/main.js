@@ -10,7 +10,7 @@ Vue.use(Vuetify)
 
 new Vue({
   vuetify: new Vuetify(),
-  router,
+  router: router,
   render: h => h(App),
   store
 }).$mount('#app')

@@ -5,7 +5,7 @@
         <v-img
           :min-height="'calc(50vh - ' + $vuetify.application.top + 'px)'"
           :max-height="'calc(80vh - ' + $vuetify.application.top + 'px)'"
-          src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
+          src="https://instagram.fhel3-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/65112518_2322660701306122_6024937770938384525_n.jpg?_nc_ht=instagram.fhel3-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=GJhO9tb7eH4AX-ySmds&oh=6393af8b01a8999d6bb04048f31316f3&oe=5EE11AD3"
         >
           <v-theme-provider dark>
             <v-container fill-height>

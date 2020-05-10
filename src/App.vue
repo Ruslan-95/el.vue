@@ -4,7 +4,7 @@
 
       <myNav/>
 
-      <myBody/>
+      <router-view></router-view>
 
       <myFooter/>
 
@@ -14,18 +14,18 @@
 
 <script>
 import myNav from './components/Nav'
-import myBody from './components/MainBody'
 import myFooter from './components/Footer'
 export default {
   el: '#app',
   components: {
     myNav,
-    myBody,
     myFooter
   }
 }
 </script>
 
 <style>
+  template {
 
+  }
 </style>

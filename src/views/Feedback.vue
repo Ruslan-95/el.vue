@@ -1,5 +1,10 @@
 <template>
-  <h1>Отзывы</h1>
+  <v-app id="#feedback">
+
+    <section>
+      <h1>feedback</h1>
+    </section>
+  </v-app>
 </template>
 
 <script>
@@ -9,5 +14,7 @@ export default {
 </script>
 
 <style scoped>
-
+  section {
+    height: 300px;
+  }
 </style>
