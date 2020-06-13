@@ -79,11 +79,7 @@
       </div>
     </section>
 
-    <section id="about-me" class="about-me grey lighten-4">
-        <v-parallax
-          class="about-me__parallax"
-          :height="$vuetify.breakpoint.smAndDown ? 700 : 1000"
-          src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" >
+    <section id="about-me" class="about-me">
           <v-container class="text-center grey lighten-3 py-10">
 
         <h2 class="display-2 font-weight-bold mb-3">Обо мне</h2>
@@ -127,41 +123,22 @@
             </span>
         </v-btn>
       </v-container>
-      </v-parallax>
     </section>
 
     <section id="features" class="">
       <div class="py-12"></div>
 
       <v-container class="text-center">
-        <h2 class="display-2 font-weight-bold mb-3 ">Отзывы</h2>
+        <h2 class="display-2 font-weight-bold mb-3 ">Физическим лицам</h2>
 
-        <v-responsive
-          class="mx-auto mb-12"
-          width="56"
-        >
-          <v-divider class="mb-1"></v-divider>
-
-          <v-divider></v-divider>
-        </v-responsive>
+        <v-responsive class="mx-auto mb-12" width="56"></v-responsive>
 
         <v-row>
-          <v-col
-            v-for="({ icon, title, text }, i) in features"
-            :key="i"
-            cols="12"
-            md="4"
-          >
-            <v-card
-              class="py-12 px-4"
-              color="grey lighten-3"
-              flat
-            >
+          <v-col v-for="({ icon, title, text }, i) in features" :key="i" cols="12" md="4" >
+            <v-card class="py-12 px-4" color="grey lighten-3" flat >
               <v-theme-provider dark>
                 <div>
-                  <v-avatar
-                    color="primary"
-                    size="88"
+                  <v-avatar color="primary" size="88"
                   >
                     <v-icon
                       large
@@ -189,51 +166,31 @@
       <div class="py-12"></div>
     </section>
 
-    <section id="blog">
+    <section id="blog" class="ur">
       <div class="py-12"></div>
 
       <v-container>
-        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Разделы</h2>
+        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Юридические лица</h2>
 
-        <v-responsive
-          class="mx-auto mb-12"
-          width="56"
-        >
-          <v-divider class="mb-1"></v-divider>
-
-          <v-divider></v-divider>
-        </v-responsive>
+        <v-responsive class="mx-auto mb-12" width="56"></v-responsive>
 
         <v-row>
-          <v-col
-            v-for="({ src, text, title }, i) in articles"
-            :key="i"
-            cols="12"
-            md="4"
-          >
-            <v-img
-              :src="src"
-              class="mb-4"
-              height="275"
-              max-width="100%"
-            ></v-img>
+          <v-col v-for="({ src, text, title }, i) in articles" :key="i" cols="12" md="4">
 
-            <h3
-              class="font-weight-black mb-4 text-uppercase"
-              v-text="title"
-            ></h3>
+            <div class="ur__card">
+              <v-img :src="src" class="mb-4 ur__img" height="275" max-width="100%"></v-img>
 
-            <div
-              class="title font-weight-light mb-5"
-              v-text="text"
-            ></div>
+              <div class="ur__text">
+              <h3 class="font-weight-black mb-4 text-uppercase" v-text="title"></h3>
 
-            <v-btn
-              class="ml-n4 font-weight-black"
-              text
-            >
+              <div class="title font-weight-light mb-5" v-text="text" ></div>
+              </div>
+
+            </div>
+            <v-btn class="ml-n4 font-weight-black" text>
               Читать
             </v-btn>
+
           </v-col>
         </v-row>
       </v-container>
@@ -253,34 +210,64 @@ export default {
         {
           src: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
           title: 'Банкротство',
-          text: 'Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget tortor tempor, quis porta tellus dictum.'
+          text: ''
         },
         {
           src: 'https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
           title: 'Гражданские тырыпыры',
-          text: 'Nam ut leo ipsum. Maecenas pretium aliquam feugiat. Aenean vel tempor est, vitae tincidunt risus. Sed sodales vestibulum nibh.'
+          text: ''
         },
         {
           src: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80',
           title: 'И еще ',
-          text: 'excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam.'
+          text: ''
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+          title: 'Банкротство',
+          text: ''
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+          title: 'Гражданские тырыпыры',
+          text: ''
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80',
+          title: 'И еще ',
+          text: ''
         }
       ],
       features: [
         {
-          icon: 'mdi-account-group-outline',
-          title: 'Ваня',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam'
+          icon: 'mdi-mail',
+          title: 'Административные споры',
+          text: ''
         },
         {
           icon: 'mdi-update',
-          title: 'Петя',
-          text: 'Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit.'
+          title: 'Банковские споры',
+          text: ''
         },
         {
           icon: 'mdi-shield-outline',
-          title: 'Леша',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam'
+          title: 'Трудовые споры',
+          text: ''
+        },
+        {
+          icon: 'mdi-mail',
+          title: 'Административные споры',
+          text: ''
+        },
+        {
+          icon: 'mdi-update',
+          title: 'Банковские споры',
+          text: ''
+        },
+        {
+          icon: 'mdi-shield-outline',
+          title: 'Трудовые споры',
+          text: ''
         }
       ],
       stats: [
@@ -295,6 +282,28 @@ export default {
 </script>
 
 <style scoped type="text/css" lang="scss">
+
+.ur {
+  &__card {
+    position: relative;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    color: #ffffff;
+  }
+
+  &__img {
+    filter: brightness(.3);
+  }
+}
   .hero {
 
   }
@@ -314,10 +323,8 @@ export default {
   }
 
   .stats {
-    filter: blur(5px);
-    min-height: 550px;
-    background-image: url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=10000") ;
-  }
+
+    }
 
   .blog {
 
