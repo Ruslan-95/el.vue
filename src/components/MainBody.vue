@@ -5,7 +5,7 @@
         <v-img
           :min-height="'calc(50vh - ' + $vuetify.application.top + 'px)'"
           :max-height="'calc(80vh - ' + $vuetify.application.top + 'px)'"
-          src="https://instagram.fhel3-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/65112518_2322660701306122_6024937770938384525_n.jpg?_nc_ht=instagram.fhel3-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=GJhO9tb7eH4AX-ySmds&oh=6393af8b01a8999d6bb04048f31316f3&oe=5EE11AD3"
+          src="https://images.unsplash.com/photo-1592040300223-5e9e3e3a94e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
         >
           <v-theme-provider dark>
             <v-container fill-height>
@@ -52,10 +52,37 @@
       </v-row>
     </section>
 
+    <section id="stats" class="stats">
+      <div class="containers">
+        <v-container fill-height>
+          <v-row class="mx-auto">
+            <v-col
+              v-for="[value, title] of stats"
+              :key="title"
+              cols="12"
+              md="3"
+            >
+              <div class="text-center">
+                <div
+                  class="display-3 font-weight-black mb-4"
+                  v-text="value"
+                ></div>
+
+                <div
+                  class="title font-weight-regular text-uppercase"
+                  v-text="title"
+                ></div>
+              </div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
+    </section>
+
     <section id="about-me" class="about-me grey lighten-4">
         <v-parallax
           class="about-me__parallax"
-          :height="$vuetify.breakpoint.smAndDown ? 700 : 600"
+          :height="$vuetify.breakpoint.smAndDown ? 700 : 1000"
           src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" >
           <v-container class="text-center grey lighten-3 py-10">
 
@@ -70,19 +97,22 @@
           <v-divider></v-divider>
         </v-responsive>
 
-        <v-responsive
-          class="mx-auto title font-weight-light mb-8"
-          max-width="720"
-        >
-          текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+        <v-responsive>
+          <p> Рад приветствовать Вас на своём сайте!
+          </p>
+          <p>Меня зовут Кяримов Эльтун, веду юридическую деятельность уже более 10 лет. Являюсь выпускником Московской Государственной Юридической Академии им. О.Е. Кутафина.
+          </p>
+          <p>Свою карьеру я начинал ещё будучи помощником адвоката в юридической фирме. С тех пор работал на должности юриста в крупнейших компаниях разных сфер деятельности. Такой опыт, безусловно, дал возможность оказывать услуги с выбором наиболее продуктивных тактик и способов защиты на всех стадиях судопроизводства.
+          </p>
+          <p>Среди моих клиентов есть государственные учреждения, политические партии, а так же успешные, современные и технически развитые компании из различных отраслей бизнеса.
+          </p>
+          <p>В своей работе я всегда ориентируюсь на высокий уровень клиентского обслуживания, которое включает в себя быстрый и эффективный результат с максимальной выгодой для клиента.
+          </p>
+          <p>Важно понимать, что неверный выбор юриста и стратегии может отсрочить решение Вашего вопроса на долгие месяцы, и, быть может, годы. Поэтому для меня являются принципиальными скорость и качество предоставляемых услуг.
+          </p>
+          <p>Если Вы не можете решить Вашу проблему самостоятельно, или сомневаетесь в возможности её решения, буду рад Вам помочь.
+          </p>
         </v-responsive>
-
-        <v-avatar
-          class="elevation-12 mb-12"
-          size="128"
-        >
-          <v-img src="https://sun9-41.userapi.com/c857536/v857536906/a1d41/XVgO_d5nTsI.jpg"></v-img>
-        </v-avatar>
 
         <div></div>
 
@@ -100,9 +130,7 @@
       </v-parallax>
     </section>
 
-    <section id="features"
-             class="grey lighten-4"
-    >
+    <section id="features" class="">
       <div class="py-12"></div>
 
       <v-container class="text-center">
@@ -159,36 +187,6 @@
       </v-container>
 
       <div class="py-12"></div>
-    </section>
-
-    <section id="stats">
-      <v-parallax
-        :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-        src="http://vpered-balezino.ru/wp-content/uploads/2020/02/566ff51bc361889d688b462d.jpg"
-      >
-        <v-container fill-height>
-          <v-row class="mx-auto">
-            <v-col
-              v-for="[value, title] of stats"
-              :key="title"
-              cols="12"
-              md="3"
-            >
-              <div class="text-center">
-                <div
-                  class="display-3 font-weight-black mb-4"
-                  v-text="value"
-                ></div>
-
-                <div
-                  class="title font-weight-regular text-uppercase"
-                  v-text="title"
-                ></div>
-              </div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-parallax>
     </section>
 
     <section id="blog">
@@ -297,10 +295,31 @@ export default {
 </script>
 
 <style scoped type="text/css" lang="scss">
-.about-me {
-  &__parallax {
+  .hero {
+
+  }
+
+  .about-me {
+  h2 {
     color: #000000;
   }
-}
 
+  p {
+    text-align: justify;
+  }
+  }
+
+  .features {
+
+  }
+
+  .stats {
+    filter: blur(5px);
+    min-height: 550px;
+    background-image: url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=10000") ;
+  }
+
+  .blog {
+
+  }
 </style>

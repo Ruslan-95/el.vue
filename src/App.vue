@@ -24,8 +24,10 @@ export default {
 }
 </script>
 
-<style>
-  template {
-
+<style lang="scss">
+  body {
+    p {
+      color: #000000;
+    }
   }
 </style>
