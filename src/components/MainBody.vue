@@ -9,40 +9,21 @@
         >
           <v-theme-provider dark>
             <v-container fill-height>
-              <v-row
-                align="center"
-                class="white--text mx-auto"
-                justify="center"
-              >
-                <v-col
-                  class="white--text text-center"
-                  cols="12"
-                  tag="h1"
-                >
-                    <span
-                      :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
-                      class="font-weight-light"
-                    >
+              <v-row align="center" class="white--text mx-auto" justify="center" >
+                <v-col class="white--text text-center" cols="12" tag="h1">
+                    <span :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']" class="font-weight-light" >
                       Ваш юрист
                     </span>
 
                   <br>
 
-                  <span
-                    :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
-                    class="font-weight-black"
-                  >
+                  <span :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']" class="font-weight-black">
                       Элтун Кяримов
                     </span>
 
                 </v-col>
 
-                <v-btn
-                  class="align-self-end"
-                  fab
-                  outlined
-                  @click="$vuetify.goTo('#about-me')"
-                >
+                <v-btn class="align-self-end" fab outlined @click="$vuetify.goTo('#about-me')" >
                   <v-icon>mdi-chevron-double-down</v-icon>
                 </v-btn>
               </v-row>
@@ -56,12 +37,7 @@
       <div class="containers">
         <v-container fill-height>
           <v-row class="mx-auto">
-            <v-col
-              v-for="[value, title] of stats"
-              :key="title"
-              cols="12"
-              md="3"
-            >
+            <v-col v-for="[value, title] of stats" :key="title" cols="12" md="3">
               <div class="text-center">
                 <div
                   class="display-3 font-weight-black mb-4"
@@ -138,26 +114,15 @@
             <v-card class="py-12 px-4" color="grey lighten-3" flat >
               <v-theme-provider dark>
                 <div>
-                  <v-avatar color="primary" size="88"
-                  >
-                    <v-icon
-                      large
-                      v-text="icon"
-                    ></v-icon>
+                  <v-avatar color="primary" size="88">
+                    <v-icon large v-text="icon"></v-icon>
                   </v-avatar>
                 </div>
               </v-theme-provider>
 
-              <v-card-title
-                class="justify-center font-weight-black text-uppercase"
-                v-text="title"
-              ></v-card-title>
+              <v-card-title class="justify-center font-weight-black text-uppercase" v-text="title"></v-card-title>
 
-              <v-card-text
-                class="subtitle-1"
-                v-text="text"
-              >
-              </v-card-text>
+              <v-card-text class="subtitle-1" v-text="text"></v-card-text>
             </v-card>
           </v-col>
         </v-row>
@@ -177,13 +142,13 @@
         <v-row>
           <v-col v-for="({ src, text, title }, i) in articles" :key="i" cols="12" md="4">
 
-            <div class="ur__card">
+            <div class="ur__card transformed">
               <v-img :src="src" class="mb-4 ur__img" height="275" max-width="100%"></v-img>
 
               <div class="ur__text">
               <h3 class="font-weight-black mb-4 text-uppercase" v-text="title"></h3>
 
-              <div class="title font-weight-light mb-5" v-text="text" ></div>
+              <div class="title font-weight-light mb-5" v-text="text"></div>
               </div>
 
             </div>
@@ -209,33 +174,27 @@ export default {
       articles: [
         {
           src: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-          title: 'Банкротство',
-          text: ''
+          title: 'Банкротство'
         },
         {
           src: 'https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-          title: 'Гражданские тырыпыры',
-          text: ''
+          title: 'Гражданские споры'
         },
         {
           src: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80',
-          title: 'И еще ',
-          text: ''
+          title: 'Административные споры'
         },
         {
-          src: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-          title: 'Банкротство',
-          text: ''
+          src: 'https://images.unsplash.com/photo-1592099086584-511dcb1f0e85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+          title: 'Прочие споры'
         },
         {
-          src: 'https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-          title: 'Гражданские тырыпыры',
-          text: ''
+          src: 'https://images.unsplash.com/photo-1592062726182-1c83c3bc4c17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+          title: 'Еще категория'
         },
         {
-          src: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80',
-          title: 'И еще ',
-          text: ''
+          src: 'https://images.unsplash.com/photo-1592069491223-17819fb5e90a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80',
+          title: 'И еще '
         }
       ],
       features: [
@@ -286,6 +245,22 @@ export default {
 .ur {
   &__card {
     position: relative;
+    opacity: .7;
+    animation: notransform 5s infinite;
+    transform: matrix(1, 0, 0, 1, 0, 10);
+    &:hover {
+      cursor: pointer;
+      transform: ease-in 5s;
+      opacity: 1;
+      .ur__img {
+        filter: brightness(.8);
+      }
+    }
+    @keyframes notransform {
+      50%{
+        transform: none;
+        }
+}
   }
 
   &__text {
@@ -301,7 +276,8 @@ export default {
   }
 
   &__img {
-    filter: brightness(.3);
+    filter: brightness(.2) blur(3px);
+    border-radius: 3px;
   }
 }
   .hero {
